@@ -1,0 +1,71 @@
+body {
+    font-family: 'Gothic A1', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #fbfaf9;
+}
+
+.background-logo {
+    background: url('images/kS.png') no-repeat center center;
+    background-size: contain;
+    width: 80%;
+    height: 80vh;
+    position: fixed;
+    top: -50px;
+    left: 10%;
+    z-index: -1;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fbfaf9;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.email-link {
+    color: #555;
+    text-decoration: none;
+}
+
+.email-link:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 770px) {
+    .background-logo {
+        height: 60vh;
+        top: -30px;
+    }
+
+    .container {
+        max-width: 90%;
+        padding: 15px;
+        bottom: 30px;
+    }
+}
+
+@media (max-width: 670px) {
+    .background-logo {
+        height: 60vh;
+        top: -20px;
+    }
+
+    .container {
+        max-width: 100%;
+        padding: 10px;
+        bottom: 50px;
+    }
+
+    .container p,
+    .container h1,
+    .container h2 {
+        font-size: 14px;
+    }
+}
