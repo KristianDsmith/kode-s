@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;
-    background: linear-gradient(to right, #89CFF0, #A8D5BA, #30A7A3, #B2B2B2, #D4AF37);
+    background: linear-gradient(to right, #30A7A3,  #89CFF0, #A8D5BA, #B2B2B2, #D4AF37);
     color: #000;
     display: flex;
     align-items: center;
@@ -16,6 +16,10 @@ body {
     /* Adjust the size of the logo as needed */
 }
 
+h1 {
+    font-size: 22px;
+}
+
 .content {
     max-width: 600px;
     text-align: center;
@@ -24,10 +28,25 @@ body {
 .email-link {
     color: rgb(0, 0, 0);
     text-decoration: none;
+    position: relative;
+    display: inline-block;
+    margin-top: 10px;
 }
 
-.email-link:hover {
-    text-decoration: underline;
+.underline-effect::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #000;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+    transform-origin: left;
+}
+
+.underline-effect:hover::after {
+    width: 100%;
 }
 
 @media (max-width: 770px) {
